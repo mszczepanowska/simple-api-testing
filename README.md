@@ -3,6 +3,13 @@ Simple project to learn Rest API testing and some Go language basics
 
 ## Prerequisites
 
+
+* generate ssh key and add it to github
+
+```
+ssh-keygen -t rsa -b 2048 -C "email" -f ~/.ssh/misia
+```
+
 * download repository
 
 ```
