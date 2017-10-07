@@ -1,0 +1,59 @@
+{
+	"variables": [],
+	"info": {
+		"name": "simple-api-testing",
+		"_postman_id": "66714ab5-08e0-6aed-5f07-55d9b76bff84",
+		"description": "# simple-api-testing\n\nSimple project to learn Rest API testing and some Go language basics",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "root server path",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Response code is correct\"] = responseCode.code === 403;",
+							"tests[\"Response body is correct\"] = responseBody.has(\"access denied\");",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "localhost:8080/",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "endpoint for checking `/` path"
+			},
+			"response": []
+		},
+		{
+			"name": "status",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Response body is correct\"] = responseBody === \"OK\";",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "localhost:8080/api/status",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "endpoint for checking `/api/status` path"
+			},
+			"response": []
+		}
+	]
+}

@@ -31,3 +31,4 @@ git config --local user.email "email"
 
 ### Useful links
 * https://www.gitignore.io/ - web page to generate .gitignore file
+* https://tour.golang.org - tour of the Go programming language
